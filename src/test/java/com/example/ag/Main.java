@@ -24,8 +24,8 @@ public class Main {
     
     public static void main(String[] args) throws IOException {
 
-        lerArquivo("instancias/Teste_01.dat");
-        //lerArquivos("instancias/");
+        //lerArquivo("instancias/Teste_01.dat");
+        lerArquivos("instancias/");
 
     }
 
@@ -40,7 +40,7 @@ public class Main {
                     String ww = arquivo.getAbsolutePath() + ": " + arquivo.getName();
                     System.out.println(ww);
 
-                    FileInputStream stream = new FileInputStream(arquivo.getName());
+                    FileInputStream stream = new FileInputStream(arquivo.getAbsolutePath());
                     InputStreamReader reader = new InputStreamReader(stream);
                     BufferedReader br = new BufferedReader(reader);
                     String linha = br.readLine();
